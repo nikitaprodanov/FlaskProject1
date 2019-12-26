@@ -1,0 +1,5 @@
+This is our flask project for the first term in TUES.
+
+Project name: Basic chat
+
+Participants: No.20 - Nikita Prodanov(uchihanaruto9371) && No.23 - Simeon Novkov
