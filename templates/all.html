@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+	{% for message in messages %}
+		<p>{{message.author}}: {{message.message}}</p>
+		<form action="/all/edit/{{message.id}}">
+			<button type="submit">Edit</button>
+		</form>
+		<form action="/all/delete/{{message.id}}", method='POST'>
+			<button type="submit">Delete</button>
+		</form>
+	{% endfor %}
+	<form action="/">
+		<button type="submit">New Message</button>
+	</form>
+{% endblock %}

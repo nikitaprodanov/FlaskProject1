@@ -5,5 +5,13 @@
 {% endblock %}
 
 {% block body %}
-<h1>Template</h1>
+	<div>
+		<form action="/" method="POST">
+		  User:<br>
+		  <input type="text" name="author"><br>
+		  Message:<br>
+		  <input type="text" name="message"><br><br>
+		  <input type="submit" value="Submit">
+		</form> 
+	</div>
 {% endblock %}
