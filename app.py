@@ -2,8 +2,15 @@ from flask import Flask
 from flask import render_template, url_for, request, redirect
 from message import Message
 
+import logging
+
 
 app = Flask(__name__)
+app.logger.disabled = True
+log = logging.getLogger('werkzeug') 
+
+logging.basicConfig(filename = 'Info.log', level = logging.INFO)
+log.disabled = True
 
 @app.route('/', methods = ['GET', 'POST'])
 def new_message():
@@ -12,6 +19,7 @@ def new_message():
 	elif request.method == 'POST':
 		values = (None, request.form['author'], request.form['message'])
 		message = Message(*values).create()
+		logging.info('%s created new message!', message.author)
 		return redirect('/all')
 
 @app.route('/all')
@@ -27,12 +35,14 @@ def edit_message(id):
 		message = Message.find(id)
 		message.message = request.form['edit_message'] 
 		message.update()
+		logging.info('%s edited message with id = %d!', message.author, message.id)
 		return redirect('/all')
 
 @app.route('/all/delete/<int:id>', methods = ['POST'])
 def delete_message(id):
 	message = Message.find(id)
 	message.delete()
+	logging.info('%s deleted message with id = %d', message.author, id)
 	return redirect('/all')
 
 
