@@ -1,5 +1,82 @@
 body {
 	margin: 0;
 	font-family: sans-serif;
-	color: green;
+	color: whitesmoke;
+	background: grey;
+}
+
+.content {
+	background: grey;
+}
+
+button {
+	box-shadow: inset -3px -3px 10px #cc870a;
+	text-transform: uppercase;
+	font-weight: normal;
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	border-radius: 15px;
+}
+
+.edit {
+	background-color: #9acd32;
+	box-shadow: inset -3px -3px 10px #7cfc00;
+	float: left;
+	color: #006900;
+}
+
+.delete {
+   background-color: #dc143c;
+   box-shadow: inset -3px -3px 10px #ffa07a;
+   color: #8b0000;
+}
+
+.new-message {
+   background-color: #00C5BE;
+   box-shadow: inset -3px -3px 10px #cc870a;
+   color: #00f;
+}
+
+.update {
+	background-color: #9acd32;
+	box-shadow: inset -3px -3px 10px #7cfc00;
+	color: #006900;
+}
+
+.edit:hover {background-color: rgba(154, 205, 50, 0.5);}
+
+.edit:active {
+  background-color: #9acd32;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.delete:hover {background-color: rgba(220, 20, 60, 0.7);}
+
+.delete:active {
+  background-color: #dc143c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.new-message:hover {background-color: rgba(0, 197, 190, 0.7);}
+
+.new-messge:active {
+  background-color: #00C5BE;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.update:hover {background-color: rgba(154, 205, 50, 0.5);}
+
+.update:active {
+  background-color: #9acd32;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

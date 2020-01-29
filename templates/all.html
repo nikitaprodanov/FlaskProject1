@@ -8,13 +8,14 @@
 	{% for message in messages %}
 		<p>{{message.author}}: {{message.message}}</p>
 		<form action="/all/edit/{{message.id}}">
-			<button type="submit">Edit</button>
+			<button type="submit" class="edit">Edit</button>
 		</form>
 		<form action="/all/delete/{{message.id}}", method='POST'>
-			<button type="submit">Delete</button>
+			<button type="submit" class="delete">Delete</button>
 		</form>
+		<hr>
 	{% endfor %}
 	<form action="/">
-		<button type="submit">New Message</button>
+		<button type="submit" class="new-message">New Message</button>
 	</form>
 {% endblock %}
