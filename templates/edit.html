@@ -7,7 +7,7 @@
 {% block body %}
 	<form action="/all/edit/{{message.id}}" method="POST">
 		Message:<br>
-		<input type="text" name="edit_message">
+		<input type="text" name="edit_message" placeholder="Edit...">
 		<button type="submit" class="update">Update</button>
 	</form>
 {% endblock %}
