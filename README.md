@@ -1,2 +1,2 @@
 # FlaskProject1
-This is our flask practice project for basic chat!
+I successfully changed my username and now try to use it in push
